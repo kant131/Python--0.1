@@ -17,6 +17,7 @@ Python 程序语言指定任何非 0 和非空（null）值为 True，0 或者 n
 
 Python 中，if 语句的基本形式如下：
 
+<!-- skip-ci -->
 ```python
 if 判断条件：
     执行语句……
@@ -78,6 +79,7 @@ if num :
 
 还有再啰嗦一点，提醒一下，在条件判断代码中的冒号 `:` 后、下一行内容是一定要缩进的。不缩进是会报错的。
 
+<!-- skip-ci -->
 ```python
 num = ''
 if num :
@@ -105,6 +107,7 @@ IndentationError: expected an indented block
 
 用伪代码来表示：
 
+<!-- skip-ci -->
 ```python
 if 判断条件1:
     执行语句1……

@@ -53,6 +53,7 @@ print('Hello Python')  ──向解释器发出指令──▶  Python 解释器
 
 如果你写代码过程中，有这样的疑问，直接写一下代码，自己验证一下是最好的。
 
+<!-- skip-ci -->
 ```python
 print(Hello Python)
 ```

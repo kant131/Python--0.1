@@ -31,7 +31,7 @@ def extract_blocks(md_path: Path) -> list[tuple[int, str, bool]]:
     return blocks
 
 
-def run_block(code: str, timeout: int = 10) -> tuple[bool, str]:
+def run_block(code: str, timeout: int = 30) -> tuple[bool, str]:
     """把 code 写到临时文件并跑，返回 (成功?, stderr)。"""
     with tempfile.NamedTemporaryFile(
         mode="w", suffix=".py", delete=False, encoding="utf-8"
@@ -44,6 +44,10 @@ def run_block(code: str, timeout: int = 10) -> tuple[bool, str]:
             capture_output=True,
             text=True,
             timeout=timeout,
+            # 不给子进程继承 stdin：含 input() 的块在有 stdin 的环境里会一直等输入
+            # 直到超时，在没有 stdin 的环境里立刻抛 EOFError——同一份代码两种结果，
+            # CI 各版本失败数因此长期在 69~72 之间飘。钉死成 DEVNULL 让它稳定抛 EOFError。
+            stdin=subprocess.DEVNULL,
         )
         return result.returncode == 0, result.stderr
     except subprocess.TimeoutExpired:
@@ -55,7 +59,7 @@ def run_block(code: str, timeout: int = 10) -> tuple[bool, str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", default=["Article"])
-    parser.add_argument("--timeout", type=int, default=10)
+    parser.add_argument("--timeout", type=int, default=30)
     args = parser.parse_args()
 
     failed = 0

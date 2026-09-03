@@ -3,6 +3,7 @@
 ##  1、模块
 * 模块尽量使用小写命名，首字母保持小写，尽量不要用下划线(除非多个单词，且数量不多的情况)
 
+<!-- skip-ci -->
 ```python
 # 正确的模块名
 import decoder
@@ -74,7 +75,7 @@ CONNECTION_TIMEOUT = 600
 ```python
 MAX_OVERFLOW = 100
 
-Class FooBar:
+class FooBar:
 
     def foo_bar(self, print_):
         print(print_)

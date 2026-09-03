@@ -79,6 +79,7 @@
 
 基本的语法格式：
 
+<!-- skip-ci -->
 ```python
 for iterating_var in sequence:
    statements(s)
@@ -139,6 +140,7 @@ for i in dict:
 
 比如，你试了之后，会发现整数和浮点数是不可以直接放在 for 循环里面的。
 
+<!-- skip-ci -->
 ```python
 a = 100
 
@@ -299,6 +301,7 @@ while i < 10:
 
 **for 循环嵌套语法**
 
+<!-- skip-ci -->
 ```python
 for iterating_var in sequence:
    for iterating_var in sequence:
@@ -308,6 +311,7 @@ for iterating_var in sequence:
 
 **while 循环嵌套语法**
 
+<!-- skip-ci -->
 ```python
 while expression:
    while expression:

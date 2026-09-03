@@ -42,6 +42,7 @@ print(int(str1) + int(str2))
 
 还有小数形式的字符串也是不能用  `int()`  函数转换的。
 
+<!-- skip-ci -->
 ```python
 print(int('88.88'))
 ```

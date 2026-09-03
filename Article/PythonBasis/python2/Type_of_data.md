@@ -37,6 +37,7 @@ print(str3)
 
 这样就直接报错了。
 
+<!-- skip-ci -->
 ```python
 str1 = '两'点'水'
 print(str1)

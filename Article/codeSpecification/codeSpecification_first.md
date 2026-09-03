@@ -72,6 +72,7 @@ from subprocess import Popen, PIPE
 ```
 * import语句应该使用 __absolute__ import
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 from foo.bar import Bar
@@ -83,6 +84,7 @@ from ..bar import Bar
 * import语句应该放在文件头部，置于模块说明及docstring之后，于全局变量之前；
 * import语句应该按照顺序排列，每组之间用一个空行分隔
 
+<!-- skip-ci -->
 ```python
 import os
 import sys
@@ -95,12 +97,14 @@ import foo
 
 * 导入其他模块的类定义时，可以使用相对导入
 
+<!-- skip-ci -->
 ```python
 from myclass import MyClass
 ```
 
 * 如果发生命名冲突，则可使用命名空间
 
+<!-- skip-ci -->
 ```python
 import bar
 import foo.bar
@@ -113,6 +117,7 @@ foo.bar.Bar()
 
 * 在二元运算符两边各空一格`[=,-,+=,==,>,in,is not, and]`:
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 i = i + 1
@@ -155,6 +160,7 @@ def complex(real, imag = 0.0):
 
 * 左括号之后，右括号之前不要加多余的空格
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 spam(ham[1], {eggs: 2})
@@ -165,6 +171,7 @@ spam( ham[1], { eggs : 2 } )
 
 * 字典对象的左括号之前不要多余的空格
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 dict['key'] = list[index]
@@ -193,6 +200,7 @@ Python 支持括号内的换行。这时有两种情况。
 
 1) 第二行缩进到括号的起始处
 
+<!-- skip-ci -->
 ```python
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
@@ -209,6 +217,7 @@ def long_function_name(
 
 使用反斜杠`\`换行，二元运算符`+` `.`等应出现在行末；长字符串也可以用此法换行
 
+<!-- skip-ci -->
 ```python
 session.query(MyTable).\
         filter_by(id=1).\
@@ -221,6 +230,7 @@ print 'Hello, '\
 
 禁止复合语句，即一行中包含多个语句：
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 do_first()
@@ -233,6 +243,7 @@ do_first();do_second();do_third();
 
 `if/for/while`一定要换行：
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 if foo == 'blah':

@@ -16,6 +16,7 @@
 ### 1.2、行注释
 至少使用两个空格和语句分开，注意不要使用无意义的注释
 
+<!-- skip-ci -->
 ```python
 # 正确的写法
 x = x + 1  # 边框加粗一个像素
@@ -30,6 +31,7 @@ x = x + 1 # x加1
 
 * 比较重要的注释段, 使用多个等号隔开, 可以更加醒目, 突出重要性
 
+<!-- skip-ci -->
 ```python
 app = create_app(name, options)
 
@@ -71,6 +73,7 @@ are also implicitly created anytime a new section starts.
 
 * 不要在文档注释复制函数定义原型, 而是具体描述其具体内容, 解释具体参数和返回值等
 
+<!-- skip-ci -->
 ```python
 #  不推荐的写法(不要写函数原型等废话)
 def function(a, b):
